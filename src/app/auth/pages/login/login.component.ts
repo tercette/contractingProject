@@ -20,8 +20,9 @@ loginForm!: FormGroup;
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group ({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      //email: ['', [Validators.required, Validators.email]],
+      username: ['', [Validators.required]],
+      password: ['', [Validators.required, Validators.minLength(5)]],
     });
   }
 
@@ -30,6 +31,7 @@ loginForm!: FormGroup;
     console.log('Dados login => ',dadosLogin)
     this.LoginService.LoginUsuario(dadosLogin).subscribe( token => {
       const loginToken = token
+      console.log('login token=> ',loginToken)
     })
   }
 

@@ -1,4 +1,4 @@
-<div style="min-width: 300px;">
+
   <div class="login-content">
 
     <form class="form-content" [formGroup]="loginForm" (submit)="submitLogin()">
@@ -8,11 +8,11 @@
 
       <div>
         <div>
-          <input class="input-Login" placeholder="email" formControlName='email'>
+          <input class="input-Login" placeholder="email" formControlName='username'>
         </div>
         <div class="error-message" *ngIf="
-          loginForm.get('email')?.invalid &&
-          loginForm.get('email')?.touched ">
+          loginForm.get('username')?.invalid &&
+          loginForm.get('username')?.touched ">
           Enter with a valid e-mail!
         </div>
         <div>
@@ -34,5 +34,5 @@
     </form>
 
   </div>
-</div>
+
 

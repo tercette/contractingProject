@@ -3,6 +3,8 @@
   justify-content: center;
   align-items: center;
   margin: 10%;
+  width: auto;
+  height: 80%;
 }
 
 .form-content {
@@ -13,6 +15,7 @@
   width: 45%;
   height: 350px;
   transition: all 0.5s ease-in-out;
+  min-width: 300px;
   }
 
 .form-content:hover
