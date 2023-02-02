@@ -11,12 +11,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
+import { NewsComponent } from './auth/pages/news/news.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    NewsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

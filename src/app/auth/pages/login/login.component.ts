@@ -15,7 +15,7 @@ loginForm!: FormGroup;
   constructor(
     private formBuilder : FormBuilder,
     private router : Router,
-    public LoginService : LoginService
+    public LoginService : LoginService,
     ) { }
 
   ngOnInit(): void {
@@ -29,10 +29,14 @@ loginForm!: FormGroup;
   submitLogin() {
     const dadosLogin = this.loginForm.getRawValue() as LoginModel;
     console.log('Dados login => ',dadosLogin)
-    this.LoginService.LoginUsuario(dadosLogin).subscribe( token => {
+    /* this.LoginService.LoginUsuario(dadosLogin).subscribe( token => {
       const loginToken = token
-      console.log('login token=> ',loginToken)
-    })
+      console.log('login token=> ', loginToken)
+    }) */
+
+    this.router.navigate(["/news"]);
   }
+
+
 
 }

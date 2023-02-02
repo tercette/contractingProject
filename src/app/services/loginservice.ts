@@ -17,6 +17,6 @@ export class LoginService {
   private readonly baseURL = environment["endpoint"];
 
 LoginUsuario(object:any){
-  return this.httpClient.post<any>(`${this.baseURL}/signin`, object);   //https://localhost:7231/Login/signin
+  return this.httpClient.post<any>(`${this.baseURL}/signin`, object);   
 }
 }
