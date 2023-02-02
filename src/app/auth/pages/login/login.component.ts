@@ -1,3 +1,4 @@
+import { LoginService } from './../../../services/loginservice';
 import { LoginModel } from './../../../models/LoginModel';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup, Validators } from '@angular/forms'
@@ -13,7 +14,8 @@ loginForm!: FormGroup;
 
   constructor(
     private formBuilder : FormBuilder,
-    private router : Router
+    private router : Router,
+    public LoginService : LoginService
     ) { }
 
   ngOnInit(): void {
@@ -26,6 +28,9 @@ loginForm!: FormGroup;
   submitLogin() {
     const dadosLogin = this.loginForm.getRawValue() as LoginModel;
     console.log('Dados login => ',dadosLogin)
+    this.LoginService.LoginUsuario(dadosLogin).subscribe( token => {
+      const loginToken = token
+    })
   }
 
 }
