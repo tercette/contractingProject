@@ -13,6 +13,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NewsComponent } from './auth/pages/news/news.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { Interceptor } from './interceptor/interceptor';
+import { MovimentationComponent } from './auth/pages/movimentation/movimentation.component';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 const authService = [Interceptor]
 
@@ -21,7 +24,8 @@ const authService = [Interceptor]
     AppComponent,
     LoginComponent,
     NewsComponent,
-    NavbarComponent
+    NavbarComponent,
+    MovimentationComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,9 @@ const authService = [Interceptor]
     MatIconModule,
     ReactiveFormsModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [
     authService,

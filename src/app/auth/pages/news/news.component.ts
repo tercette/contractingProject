@@ -7,11 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsComponent implements OnInit {
 
-
   constructor(){}
 
   newsList!: Array<number>;
-
 
   ngOnInit(): void {
     const list = new Array<number>();
