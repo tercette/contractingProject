@@ -6,14 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news.component.scss']
 })
 export class NewsComponent implements OnInit {
+  newsList!: Array<number>;
+  today: Date =  new Date()
 
   constructor(){}
 
-  newsList!: Array<number>;
 
   ngOnInit(): void {
     const list = new Array<number>();
-    for (let index = 0; index <6; index++) {
+    for (let index = 0; index <1; index++) {
       list.push(index);
     }
     this.newsList = list

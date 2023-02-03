@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 
 @Injectable(
@@ -6,6 +7,8 @@ import { Injectable } from '@angular/core';
 )
 
 export class AuthService {
+  private data = new BehaviorSubject<any>(null);
+  currentData:any = this.data.asObservable();
 
   private UserAuthenticated: boolean = false;
 
@@ -20,5 +23,9 @@ export class AuthService {
 
   public ClearToken() {
     sessionStorage.removeItem('token');
+  }
+
+  updateData(data: any) {
+    this.data.next(data);
   }
 }

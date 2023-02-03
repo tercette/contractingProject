@@ -6,6 +6,7 @@
   align-items: center;
   position: fixed;
   width: 100%;
+  padding: 5px;
   .logo {
     height: 30px;
     width: 120px;
@@ -14,11 +15,11 @@
   }
 
   .user-logout {
-    margin-left: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-
+    width: 100%;
+    padding: 0 10px;
   }
 
   .user-pic {
@@ -29,13 +30,26 @@
   }
 
   .btn-logout {
-    height: 40px;
-    width: 50px;
-    background: #fff;
     display: flex;
-    margin: 8px;
+    margin: 8px 16px;
     cursor: pointer;
     align-items: center;
     text-align: center;
   }
+}
+
+
+.pic {
+width: 100%;
+border-radius: 100%;
+}
+
+.picDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  font-size: large;
+  color: antiquewhite;
+  font-weight: bold;
 }

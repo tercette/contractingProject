@@ -8,14 +8,21 @@ import {ErrorStateMatcher} from '@angular/material/core';
   styleUrls: ['./movimentation.component.scss']
 })
 export class MovimentationComponent implements ErrorStateMatcher {
-  value = 'Clear me';
+  value = 1;
+  operationType : string = 'Credit';
+  types: string[] = ['Credit', 'Debit']
+  inputValue = null
+
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;
     return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
   }
 
-  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-
-
+  getValue(inputValue:number){
+    let operation = {value: inputValue, operation: this.operationType}
+    console.log(inputValue, this.operationType)
+    this.inputValue = null
+    this.operationType = 'Credit'
+  }
 
 }

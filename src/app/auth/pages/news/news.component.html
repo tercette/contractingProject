@@ -1,19 +1,16 @@
 <app-navbar></app-navbar>
 <div class="news-content">
-  <app-movimentation></app-movimentation>
   <div class="news-list">
+    <app-movimentation></app-movimentation>
     <ng-container *ngFor="let item of newsList" >
       <div class="news">
         <div class="head-news">
           <div class="news-date">
-            Date: 02/02/2023
-          </div>
-          <div class="user">
-            Leandro
+            Date: {{today |  date: 'dd/MM/yyyy' }}
           </div>
         </div>
         <div class="news-text">
-          This is our news created just for testing purposes
+          The balance value is:
         </div>
       </div>
     </ng-container>

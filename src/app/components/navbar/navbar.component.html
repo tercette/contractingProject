@@ -1,13 +1,11 @@
 <div class="navbar-site">
-  <div class="logo">
-
-  </div>
   <div class="user-logout">
-    <div class="user-pic">
-
+    <div class="picDiv">
+      <div class="user-pic">
+        <img class="pic" src="../../../assets/foto.png" alt="">
+      </div>
+      {{ name }}
     </div>
-    <div class="btn-logout" (click)="logout()">
-Logout
-    </div>
+    <button class="btn-logout" mat-flat-button color="primary" (click)="logout()">Logout</button>
   </div>
 </div>

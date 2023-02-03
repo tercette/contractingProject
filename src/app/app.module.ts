@@ -15,7 +15,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { Interceptor } from './interceptor/interceptor';
 import { MovimentationComponent } from './auth/pages/movimentation/movimentation.component';
 import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
 import { FormsModule } from '@angular/forms';
+import { CurrencyMaskModule } from "ng2-currency-mask";
 
 const authService = [Interceptor]
 
@@ -38,7 +40,9 @@ const authService = [Interceptor]
     CommonModule,
     HttpClientModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatRadioModule,
+    CurrencyMaskModule
   ],
   providers: [
     authService,
