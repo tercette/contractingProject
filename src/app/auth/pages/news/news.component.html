@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<div class="news-content" style="position:fixed">
+<div class="news-content" >
   <div class="news-list">
     <app-movimentation></app-movimentation>
     <ng-container *ngFor="let item of newsList">
@@ -14,7 +14,7 @@
         </div>
       </div>
     </ng-container>
-    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; ">
+    <div >
       <ul *ngFor="let lists of list" style="list-style: none;">
         <li >Value: R${{ lists[0] }} - Date:{{ lists[1] }} </li>
       </ul>
