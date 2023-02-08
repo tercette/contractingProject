@@ -1,4 +1,5 @@
 export const environment = {
   production: false,
-  endpoint:"https://localhost:7231/Login" 
+  endpoint:"http://localhost:8080/api/auth",
+  endpoint2: "https://localhost:44380/api/operation" //https://localhost:44380/api/operation/addoperation
 };

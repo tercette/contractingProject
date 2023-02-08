@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../auth.service';
 
 @Component({
   selector: 'app-news',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsComponent implements OnInit {
   newsList!: Array<number>;
-  today: Date =  new Date()
+  today: Date =  new Date();
+  balance: any
+  list:any
 
-  constructor(){}
+  constructor
+  (private authService: AuthService
+    ){
+    this.authService.actualBalance.subscribe((item:any) =>
+    this.balance = item)
+    console.log(this.balance)
+    this.authService.updatedList.subscribe((item:any) =>
+    this.list = item)
+    console.log(this.list)
+
+  }
 
 
   ngOnInit(): void {
